@@ -1,3 +1,3 @@
-# Ejemplos-en-C-
-Ejemplos realizados en C
-go
+# General-21
+commit desde web
+commit desde escritorio y archivo de texto
