@@ -1,0 +1,38 @@
+#include<stdio.h>
+
+int main(){
+	/* Mini Juego de la vida
+• Si c=0 y N=3 entonces el nuevo valor de c es 1.
+• Si c=1 y N<2 entonces el nuevo valor de c es 0.
+• Si c=1 y N=2 o N=3 entonces el nuevo valor de c es 1.
+• Si c=1 y 3<N=8 entonces el nuevo valor de c es 0.
+c=0   o c=1
+REVISIÓN
+	*/
+	int c=0,N,r;
+	scanf("%d %d",&c, &N);
+	if (c==0 && N==3){
+		r=++c;
+printf("%d", r);
+	}	
+	else if (c==1 && N<2){
+		r=0;
+printf("%d", r);
+	}
+
+	else if ((c==1 && N==2) || (c==1 && N==3) )
+	{r=c++;
+printf("%d", r);
+	}
+else if ((c==1 && N>3) && (c==1 && N<=8)   )
+{r=0;
+printf("%d", r);
+}
+
+else if (N>8 || N<0    )
+printf("ERROR");
+else if (c==0 && N!=3    )
+{r=0;
+printf("%d", r);
+}
+	return 0;}
