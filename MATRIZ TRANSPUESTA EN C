@@ -1,0 +1,44 @@
+#include<stdio.h>
+/*
+			Matriz Transpuesta
+			
+Si A es cualquier matriz m X n, entonces la transpuesta de A se denota por At Y se
+define como la matriz de n X m cuya primera columna es el primer renglón de A , su segunda
+columna es el segundo renglón de A , su tercera columna es el tercer renglón de A , etc.
+
+*/
+
+int main(){
+	//Declaramos la matriz de tamaño máximo y los índices que utilizaremos. 
+	printf("Dmensiones de la matriz nXm: \n");
+	int m1[100][100], i, j, N,M;
+	
+	//Leemos a N y M para llenar una matriz de m X n (renglones y columnas) 
+	scanf("%d %d", &N,&M);
+	printf("Introduce la matriz elemento por elemento\n");
+	for(i=0; i<N; i++){ //el primer for es para las filas
+		
+		for(j=0; j<M; j++){ // este for es para las columas
+			//LLenamamos la matriz N X M
+			scanf("%d", &m1[i][j]);
+		}
+		
+	}	
+	
+	
+	//Recorremos la matriz y mostramos sus elementos
+	printf("La matriz transpuesta es: \n");
+	
+	for(i=0; i<M; i++){  //el primer for es para las filas
+		
+		for(j=0; j<N; j++){ // este for es para las columas
+			
+			printf("%d ", m1[j][i]); //se muestran los elementos de la matriz
+		}
+		
+		printf("\n"); //cada que terminamos de imprimir toda una fila mostramos un salto de líneas para obtener en pantalla el formato de una matriz.
+	}	
+	
+	
+	return 0;
+}
