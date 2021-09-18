@@ -1,0 +1,130 @@
+#include <iostream>
+using namespace std;
+int main(){
+
+int a[20];
+int b[20];
+int c[20];
+int valor;
+cout << "Ingresa la cantidad de elementos que usaras para los arreglos: ";
+cin >> valor;
+
+cout << "\nIngresa los valores para el arreglo <a> separados por un espacio: ";
+
+for(int i=0; i<valor;i++){
+
+cin >> a[i];
+}
+
+cout << "\nIngresa los valores para el arreglo <b> separados por un espacio: ";
+for(int i=0; i<valor;i++)
+    {
+
+cin >> b[i];
+}
+
+// El arreglo C se llenará con la parte entera que resulte de dividir cada elemento de
+// A entre su respectivo (por posición) elemento de B, si el elemento de A es menor que el elemento de B, aparecerá un 0.
+ cout << "\nEl arreglo <c> es:  " ;
+for(int i=0;i<valor;i++){
+    if(a[i]<b[i])
+    {
+        c[i]=0;
+        cout << c[i] << " ";
+    }
+    else if(a[i]  == 0)
+         {
+        c[i]=0;
+       cout << c[i] << " ";
+
+    }
+     else if(b[i]  == 0)
+         {
+        c[i]=0;
+        cout << c[i] << " ";
+    }
+    else {
+        c[i]=a[i]/b[i];
+        cout << c[i] << " ";
+
+    }
+}
+//imprimir los tres arreglos
+ cout << "\nEl arreglo <a> es:  " ;
+for(int i=0;i<valor;i++){
+
+    cout << a[i] <<" ";
+}
+cout << "\nEl arreglo <b> es:  " ;
+for(int i=0;i<valor;i++){
+
+    cout << b[i] <<" ";
+}
+cout << "\n";
+//NUMEROS PARES E IMPARES DE A
+int paresa=0;
+int imparesa=0;
+for(int i=0; i<valor; i++){
+    if(a[i]   %2 == 0)
+        paresa+=1;
+    else
+        imparesa+=1;
+}
+cout  <<"Los pares de a son: " << paresa << endl;
+cout << "Los impares de a son: " << imparesa << endl;
+
+//NUMEROS PARES E IMPARES DE B
+int paresb=0;
+int imparesb=0;
+for(int i=0; i<valor; i++){
+    if(b[i]   %2 == 0)
+        paresb+=1;
+    else
+        imparesb+=1;
+}
+cout << "\nLos pares de b son: " << paresb << endl;
+cout << "Los impares de b son: " << imparesb << endl;
+//NUMEROS PARES E IMPARES DE C
+int paresc=0;
+int imparesc=0;
+for(int i=0; i<valor; i++){
+    if(c[i]   %2 == 0)
+        paresc+=1;
+    else
+        imparesc+=1;
+}
+cout << "\nLos pares de c son: " << paresc << endl;
+cout << "Los impares de c son: " << imparesc << endl;
+//NUMEROS MENORES EN C QUE EL VALOR REFERENCIA
+
+int menores_c=0;
+for(int i=0;i<valor;i++){
+    if(c[i]<valor)
+        menores_c+=1;
+}
+cout << "\nLa cantidad de numeros menores que el valor referencia en <c> son: " << menores_c << endl;
+//SUMATORIA DE A
+int suma_a=0;
+for(int i=0;i<valor;i++){
+
+        suma_a+=a[i];
+}
+cout << "\nLa sumatoria del arreglo <a> es: " << suma_a << endl;
+//SUMATORIA DE B
+int suma_b=0;
+for(int i=0;i<valor;i++){
+
+        suma_b+=b[i];
+}
+cout << "\nLa sumatoria del arreglo <b> es: " << suma_b << endl;
+
+//SUMATORIA DE C
+
+int suma_c=0;
+for(int i=0;i<valor;i++){
+
+        suma_c+=c[i];
+}
+cout << "\nLa sumatoria del arreglo <c> es: " << suma_c << endl;
+return 0;
+}
