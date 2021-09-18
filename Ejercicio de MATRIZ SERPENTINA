@@ -1,0 +1,36 @@
+#include<stdio.h>
+int main(){
+	
+	int N, M, i, j, valor=0,ma[50][50];
+	
+	printf("Ingresa la dimension de la matriz en el siguiente orden: N x M ");
+	
+	scanf("%d %d", &N, &M);
+	
+	//Asigna valor a la matriz de manera secuencial
+	for(i=0;i<N;i++){
+		for(j=0;j<M;j++){
+			valor+=1;         //Aumentar de 1 en 1
+			ma[i][j]=valor;   //Asignar los valores a: ma[i][j]
+		}	
+	}	
+	
+	//Imprime la matriz para comprobar lo anterior
+	printf("La matriz es: \n");
+/* Se observa que cuando la fila es impar, el comportamiento en j es descendiente
+*/
+	for(i=0; i<N; i++){
+		if((i%2)!=0){
+			for(j=M-1;j>=0;j--){
+				printf("%d ", ma[i][j]);
+			}
+		}
+		else{
+		for(j=0;j<M;j++){
+				printf("%d ", ma[i][j]);
+			}
+		}	
+		printf("\n");
+	}
+	return 0;
+}
