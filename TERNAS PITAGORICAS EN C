@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main(){
+	/*
+TERNAS PITAGORICAS
+	*/
+	int m,n,i,j,k,a,b,c,tt=0,nt=0,cc;
+	scanf("%d %d", &m, &n);
+	for(i=m; i<=n; i++){
+		for(j=m;j<=n;j++){
+			for(k=m;k<=n;k++){
+		a=i*i;
+		b=j*j;
+		c=k*k;
+		cc=a+b;
+		if(cc==c){
+		if(a<b)
+			tt++;
+		}
+		
+		else 
+		nt++;
+
+						}	//CIERRE 1ER FOR			
+						}	//CIERRE 2DO FOR
+								} //CIERRE 3ER FOR
+printf("%d " ,tt);
+
+	return 0;}
+
